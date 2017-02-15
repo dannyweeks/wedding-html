@@ -9,15 +9,24 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body class="homepage">
-        <header>
-            
+        <header class="header">
+            <div data-sticky-container>
+                <div class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+                    <div class="top-bar-left text-center">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                            <li><a href="#big-day">Big day!</a></li>
+                            <li><a href="#its-happening">It's Happening</a></li>
+                            <li><a href="#why-iceland">Why Iceland</a></li>
+                            <li><a href="#weather">The Weather</a></li>
+                            <li><a href="#weather">What To Bring</a></li>
+                            <li><a href="#flights">Flights</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <div class="header-bg">
-            
-        </div>
-
-        <div class="countdown-section">
+        <div id="big-day" class="countdown-section">
             <div class="row text-center">
                 <div class="large-16 large-centered columns">
                     <ul class="row small-up-2 medium-up-3 large-up-4 countdown">
@@ -41,7 +50,7 @@
             </div>
         </div>
 
-        <div class="happening">
+        <div id="its-happening">
             <div class="row expanded">
                 <div class="large-11 columns no-padding photo-frame-right">
                     <img src="assets/images/danny-helen.png" alt="">
@@ -64,7 +73,7 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porttitor ultrices. Donec auctor, mauris at placerat efficitur, tortor nibh sagittis mauris, quis viverra diam massa ut massa. Nulla lacinia neque sed diam maximus malesuada.
                     </p>
-                    <a href="">Why Iceland? ></a>
+                    <a href="#why-iceland">Why Iceland? ></a>
                 </div>
                 <div class="large-11 columns large-pull-1 end no-padding photo-frame-right iceland">
                     <img src="assets/images/iceland.png" alt="">
@@ -72,7 +81,7 @@
             </div>
         </div>
 
-        <div class="why-iceland">
+        <div id="why-iceland">
             <div class="row expanded">
                 <div class="large-7 large-push-2 columns">
                     <h2>Why Iceland</h2>
@@ -92,7 +101,7 @@
         <div class="weather-bring">
             <div class="row expanded">
                 <div class="large-18 columns large-centered">
-                    <div class="large-22 large-push-2 columns weather">
+                    <div id="weather" class="large-22 large-push-2 columns">
                         <h2>
                             The Weather in <br>
                             Novermeber is...
@@ -103,7 +112,7 @@
                             Freezing lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porttitor ultrices. Donec auctor, mauris at placerat efficitur, tortor nibh sagittis mauris, quis viverra diam massa ut massa. Nulla lacinia neque sed diam maximus malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porttitor ultrices.
                         </p>
                     </div>
-                    <div class="large-12 large-push-3 columns bring">
+                    <div id="bring" class="large-12 large-push-3 columns">
                         <h2>What you'll need</h2>
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -127,7 +136,7 @@
             </div>
         </div>
 
-        <div class="flights">
+        <div id="flights">
             <div class="row expanded">
                 <div class="large-12 columns no-padding photo-frame-right">
                     <img src="assets/images/flights.png" alt="">
@@ -170,5 +179,24 @@
         <script src="bower_components/what-input/dist/what-input.js"></script>
         <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
         <script src="assets/js/app.js"></script>
+
+        <script>
+            (function($) {
+                $(document).ready(function(){
+                    $('a[href*="#"]:not([href="#"])').click(function() {
+                        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                            var target = $(this.hash);
+                            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                            if (target.length) {
+                                $('html, body').animate({
+                                    scrollTop: target.offset().top - 80
+                                }, 2000);
+                                return false;
+                            }
+                        }
+                    });
+                });
+            })(jQuery );
+        </script>
     </body>
 </html>

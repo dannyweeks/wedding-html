@@ -1,12 +1,44 @@
 .homepage {
 
-	.header-bg {
+	header.header {
 		background-image: url('../images/danny-helen-bg.png');
 		// background-image: url('http://placehold.it/1440×805');
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
 		height: 100vh;
+
+		.is-stuck {
+			background-color: rgba($blue, 0.75) !important;
+		}
+
+		.top-bar, .top-bar ul {
+			background-color: transparent;
+
+			li {
+				a {
+					color: white;
+					font-family: $bodoni-std-book;
+				}
+			}
+		}
+
+		.top-bar-left {
+			width: 100%;
+			height: 48px;
+		}
+
+		.top-bar-left > ul {
+			margin: 0 auto;
+			position: relative;
+		    display: inline-block;
+
+		    li {
+		    	a {
+		    		padding: 1em 2em;
+		    	}
+		    }
+		}
 	}
 
 	.countdown-section {
@@ -70,7 +102,7 @@
 		}
 	}
 
-	.happening {
+	#its-happening {
 		padding-top: 10em;
 		padding-bottom: 10em;
 		
@@ -124,7 +156,7 @@
 		padding: 0;
 	}
 
-	.why-iceland {
+	#why-iceland {
 		margin-bottom: 4em;
 
 		h2 {
@@ -150,7 +182,7 @@
 			line-height: 40px;
 		}
 		
-		.weather, .bring {
+		#weather, #bring {
 			&:before {
 				font-family: $fontawesome;
 				color: $pink;
@@ -160,14 +192,14 @@
 			}
 		}
 		
-		.weather {
+		#weather {
 			&:before {
 				content: "\f0c2";
 			    top: -9px;
 			}
 		}
 
-		.bring {
+		#bring {
 			&:before {
 				content: "\f0f2";
 			    top: -20px;
@@ -195,7 +227,7 @@
 		}
 	}
 
-	.flights {
+	#flights {
 		margin-top: 4em;
 		
 		h2 {
