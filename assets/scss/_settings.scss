@@ -60,7 +60,7 @@ $foundation-palette: (
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #0a0a0a;
+$black: #262626;
 $white: #fefefe;
 $pink: #ffb9b0;
 $faint-gray: #eaeaea;
@@ -112,6 +112,7 @@ $block-grid-max: 8;
 $bodoni-std-book: 'Conv_Bodoni-Std-Book_7739';
 $bodoni-std-poster: 'Conv_Bodoni-Std-Poster_7743';
 $josefin-sans-regular: 'JosefinSans-Regular';
+$fontawesome: 'FontAwesome';
 
 @font-face {
   font-family: $bodoni-std-book;

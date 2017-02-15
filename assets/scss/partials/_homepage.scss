@@ -33,7 +33,7 @@
 
 				&:after {
 					content: "\f004";
-					font-family: 'FontAwesome';
+					font-family: $fontawesome;
 					position: absolute;
 					right: 0;
 					top: 50%;
@@ -47,7 +47,12 @@
 
 				.number {
 					font-size: 70px;
-					font-family: 'Conv_Bodoni-Std-Book_7739';
+					font-family: $bodoni-std-book;;
+					color: $black;
+				}
+
+				.seconds {
+					color: rgba($black, 0.5);
 				}
 
 				.date {
@@ -147,7 +152,7 @@
 		
 		.weather, .bring {
 			&:before {
-				font-family: 'FontAwesome';
+				font-family: $fontawesome;
 				color: $pink;
 				position: absolute;
 			    left: -70px;
