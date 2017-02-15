@@ -55,46 +55,51 @@
 	}
 
 	.happening {
-		padding-top: 6em;
-		padding-bottom: 6em;
-
-		.photo-frame-right {
+		padding-top: 10em;
+		padding-bottom: 10em;
+		
+		.happening-content {
 			position: relative;
 
-			img {
-				border-width: 0 10px 10px 0;
-				border-color: white;
-				border-style: solid;
-				-webkit-box-shadow: 7px 7px 21px -6px rgba(0,0,0,0.75);
-				-moz-box-shadow: 7px 7px 21px -6px rgba(0,0,0,0.75);
-				box-shadow: 7px 7px 21px -6px rgba(0,0,0,0.75);
-			}
-
-			&:after {
-				content: " ";
-				height: 100%;
-				width: 100%;
-				border-width: 5px;
-				border-color: #eaeaea;
-				border-style: solid;
-
+			.the-big-day {
 				position: absolute;
-				top: 22px;
-				right: -22px;
-				z-index: -1;
+				left: -145px;
+			    top: -110px;
+				font-size: 77px;
+				font-family: 'Conv_Bodoni-Std-Poster_7743';
+			    line-height: 74px;
+			    color: #efefef;
+			    z-index: -1;
+
+				.day {
+					
+				}
+
+				.month {
+					margin-left: 110px;
+				}
+
+				.year {
+					margin-left: 190px;
+				}
 			}
-		}
 
-		h1 {
-			font-size: 74px;
-		}
+			h1 {
+				font-size: 74px;
+				margin-top: 4rem;
+    			line-height: 84px;
+			}
 
-		h2 {
-			font-size: 34px;
-		}
+			h2 {
+				font-size: 34px;
+			    margin-top: 2em;
+			    line-height: 39px;
+			    margin-bottom: 0.5em;
+			}
 
-		p {
+			p {
 
+			}
 		}
 
 		.iceland {
@@ -112,6 +117,15 @@
 
 		h2 {
 			font-size: 74px;
+			margin-top: 2rem;
+			line-height: 84px;
+		}	
+
+		h3 {
+			font-size: 34px;
+			margin-top: 1em;
+			line-height: 39px;
+			margin-bottom: 1em;
 		}
 	}
 
@@ -121,9 +135,15 @@
 
 	.flights {
 		margin-top: 4em;
+		
+		h2 {
+			font-size: 74px;
+			margin-top: 2rem;
+			line-height: 84px;
+		}	
 
 		.iceland-2 {
-			margin-top: -130px;
+			margin-top: -110px;
 			z-index: -2;
 		}	
 	}
