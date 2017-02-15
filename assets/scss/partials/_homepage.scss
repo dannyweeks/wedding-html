@@ -17,10 +17,14 @@
 		-webkit-box-shadow: 0px 7px 24px -9px rgba(0,0,0,0.75);
 		-moz-box-shadow: 0px 7px 24px -9px rgba(0,0,0,0.75);
 		box-shadow: 0px 7px 24px -9px rgba(0,0,0,0.75);
+
+		padding-top: 3em;
+		padding-bottom: 4em;
 		
 		.countdown {
 			list-style: none;
-			margin-left: 0;	
+			margin-left: 0;
+			margin-bottom: 0;
 
 			li {
 				display: inline-block;
@@ -33,16 +37,23 @@
 					position: absolute;
 					right: 0;
 					top: 50%;
-					color: #ffb9b0;
+					color: $pink;
 					font-size: 12px;
+				}
+
+				span {
+					display: block;
 				}
 
 				.number {
 					font-size: 70px;
+					font-family: 'Conv_Bodoni-Std-Book_7739';
 				}
 
 				.date {
 					font-size: 16px;
+					margin-top: -32px;
+					font-family: $josefin-sans-regular;
 				}
 			}
 
@@ -66,14 +77,10 @@
 				left: -145px;
 			    top: -110px;
 				font-size: 77px;
-				font-family: 'Conv_Bodoni-Std-Poster_7743';
+				font-family: $bodoni-std-poster;
 			    line-height: 74px;
-			    color: #efefef;
+			    color: $even-fainter-gray;
 			    z-index: -1;
-
-				.day {
-					
-				}
 
 				.month {
 					margin-left: 110px;
@@ -131,6 +138,55 @@
 
 	.weather-bring {
 		margin-top: 4em;
+
+		h2 {
+			font-size: 34px;
+			line-height: 40px;
+		}
+		
+		.weather, .bring {
+			&:before {
+				font-family: 'FontAwesome';
+				color: $pink;
+				position: absolute;
+			    left: -70px;
+			    font-size: 60px;
+			}
+		}
+		
+		.weather {
+			&:before {
+				content: "\f0c2";
+			    top: -9px;
+			}
+		}
+
+		.bring {
+			&:before {
+				content: "\f0f2";
+			    top: -20px;
+			}
+
+			.list-group {
+				list-style: none;
+				margin-left: 0;
+
+				li {
+					color: $pink;
+					font-weight: bold;
+					font-style: italic;
+					
+					i {
+						margin-left: 1em;
+						font-size: 10px;
+						top: -2px;
+						position: relative;
+						left: -5px;
+						color: $primary-color;
+					}
+				}
+			}
+		}
 	}
 
 	.flights {
@@ -161,7 +217,7 @@
 			height: 100%;
 			width: 100%;
 			border-width: 5px;
-			border-color: #eaeaea;
+			border-color: $faint-gray;
 			border-style: solid;
 			position: absolute;
 			top: 22px;
