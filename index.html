@@ -12,8 +12,12 @@
         <header class="header">
             <div data-sticky-container>
                 <div class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
-                    <div class="top-bar-left text-center">
-                        <ul class="dropdown menu" data-dropdown-menu>
+                    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+                        <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+                        <div class="title-bar-title">Menu</div>
+                    </div>
+                    <div class="top-bar-left text-center" id="main-menu">
+                        <ul class="dropdown vertical medium-horizontal menu" data-dropdown-menu>
                             <li><a href="#big-day">Big day!</a></li>
                             <li><a href="#its-happening">It's Happening</a></li>
                             <li><a href="#why-iceland">Why Iceland</a></li>
